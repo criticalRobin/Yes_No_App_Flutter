@@ -16,7 +16,7 @@ class MyMessageBubble extends StatelessWidget {
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
             child: Text(
-              "Hola mundo desde mi burbuja",
+              "Hola hije como tas",
               style: TextStyle(color: Colors.white),
             ),
           ),
