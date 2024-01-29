@@ -7,7 +7,7 @@ const List<Color> _colorThemes = [
   Colors.green,
   Colors.blue,
   Colors.red,
-  Colors.purple,
+  Colors.indigo,
   Colors.orange,
 ];
 
@@ -15,7 +15,7 @@ class Apptheme {
   final int selectedTheme;
 
   Apptheme({required this.selectedTheme})
-      : assert(selectedTheme >= 0 && selectedTheme < _colorThemes.length - 1);
+      : assert(selectedTheme >= 0 && selectedTheme < _colorThemes.length);
 
   ThemeData theme() {
     return ThemeData(
