@@ -28,18 +28,21 @@ class MessageFieldBox extends StatelessWidget {
       ),
     );
 
-    return TextFormField(
-      onTapOutside: (event) {
-        focusNode.unfocus();
-      },
-      focusNode: focusNode,
-      controller: textController,
-      decoration: inputDecoration,
-      onFieldSubmitted: (value) {
-        onValue(value);
-        textController.clear();
-        focusNode.requestFocus();
-      },
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: TextFormField(
+        onTapOutside: (event) {
+          focusNode.unfocus();
+        },
+        focusNode: focusNode,
+        controller: textController,
+        decoration: inputDecoration,
+        onFieldSubmitted: (value) {
+          onValue(value);
+          textController.clear();
+          focusNode.requestFocus();
+        },
+      ),
     );
   }
 }
