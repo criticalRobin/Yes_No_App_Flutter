@@ -10,10 +10,6 @@ class GetYesNoAnswer {
     final response = await _dio.get(_url);
     final yesNoModel = YesNoModel.fromJsonMap(response.data);
 
-    return (yesNoModel.answer == "yes")
-        ? Message(
-            text: "Si", imageUrl: yesNoModel.image, fromWho: FromWho.other)
-        : Message(
-            text: "No", imageUrl: yesNoModel.image, fromWho: FromWho.other);
+    return yesNoModel.toMessageEntity();
   }
 }
