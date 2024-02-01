@@ -19,7 +19,7 @@ class ChatProvider extends ChangeNotifier {
     moveScrollToBottom();
 
     if (newMessage.text.endsWith("?")) {
-      await otherReply();
+      otherReply();
     }
   }
 
