@@ -15,13 +15,12 @@ class ChatProvider extends ChangeNotifier {
 
     final newMessage = Message(text: text, fromWho: FromWho.me);
     messageList.add(newMessage);
+    notifyListeners();
+    moveScrollToBottom();
 
     if (newMessage.text.endsWith("?")) {
       await otherReply();
     }
-
-    notifyListeners();
-    moveScrollToBottom();
   }
 
   Future<void> otherReply() async {
